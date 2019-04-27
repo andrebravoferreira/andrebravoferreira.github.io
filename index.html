@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>GitHub Pages | Dev</title>
 </head>
 <body>
-	<h4>Memória Futura</h4>
+	<h4>Stuff</h4>
+	<p></p>
+	<h4>MySQL Change Root Password</h4>
+	<ol>
+		<li><code>sudo nano /etc/mysql/my.cnf</code></li>
+		<li>Add the following lines at the end:<code>[mysqld] skip-grant-tables</code></li>
+		<li><code>sudo service mysql restart</code></li>
+		<li><code>mysql -u root</code></li>
+		<li><code>use mysql</code></li>
+		<li><code>select * from mysql.user where user = 'root';</code> - Look at the top to determine whether the password column is called password or authentication_string</li>
+		<li><code>UPDATE mysql.user set *password_field from above* = PASSWORD('your_new_password') where user = 'root' and host = 'localhost';</code> - Use the proper password column from above</li>
+		<li><code>FLUSH PRIVILEGES;</code></li>
+		<li><code>exit</code></li>
+		<li><code>sudo nano /etc/mysql/my.cnf</code></li>
+		<li>Remove the lines added in step 2</li>
+		<li><code>sudo service mysql restart</code></li>
+	</ol>
 </body>
 </html>
