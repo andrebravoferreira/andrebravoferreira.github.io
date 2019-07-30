@@ -22,5 +22,16 @@
 		<li>Remove the lines added in step 2</li>
 		<li><code>sudo service mysql restart</code></li>
 	</ol>
+	<p></p>
+	<h4>Import MySQL Database via SSH</h4>
+	<ol>
+		<li>Login to SSH via root user</li>
+		<li><code>mysql -u username -p;</code>&nbsp;where username is your database username</li>
+		<li>Enter MySQL Password</li>
+		<li><code>use database;</code>&nbsp;where database is your... well, you know :-)</li>
+		<li><code>SOURCE /path/to/sql/file.sql</code></li>
+		<li><code>SHOW tables;</code>&nbsp;To confirm the data was imported correctly</li>
+		<li><code>SELECT * from table;</code></li>
+	</ol>
 </body>
 </html>
