@@ -33,5 +33,12 @@
 		<li><code>SHOW tables;</code>&nbsp;To confirm the data was imported correctly</li>
 		<li><code>SELECT * from table;</code></li>
 	</ol>
+	<p></p>
+	<h4>Disable SQL Model 'ONLY_FULL_GROUP_BY'</h4>
+	<ol>
+		<li>Login to SSH via root user</li>
+		<li>mysql -u username -p;</li>
+		<li>SET SESSION sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE'</li>
+	</ol>
 </body>
 </html>
